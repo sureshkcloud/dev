@@ -16,7 +16,7 @@ jobs:
           run: cowsay -f tux "Hello Love Ice" >> tux.txt
 
         - name: Test File Exists
-          run: grep -i "tux" tux.txt
+          run: grep -i "Helo" tux.txt
           
         - name: Read Files
           run: cat tux.txt
