@@ -1,4 +1,4 @@
-name: Generate ASCII Artwork The Goat
+name: Generate ASCII Artwork The tux
 
 on: push
 
@@ -13,13 +13,13 @@ jobs:
           run: sudo apt-get install cowsay -y
 
         - name: Execute Cowsay CMD
-          run: cowsay -f goat "Run for cover, I am a GOAT....Maahaaa" >> goat.txt
+          run: fortune | cowsay -f tux | lolcat "Run for cover, I am a GOAT....Maahaaa" >> tux.txt
 
         - name: Test File Exists
-          run: grep -i "goat" goat.txt
+          run: grep -i "tux" tux.txt
           
         - name: Read Files
-          run: cat goat.txt
+          run: cat tux.txt
 
         - name: List Repo Files
           run: ls -ltra
