@@ -1,4 +1,4 @@
-name: Generate ASCII Artwork The tux
+name: executing shell script 
 
 on: push
 
@@ -9,14 +9,8 @@ jobs:
         - name: Checkout Repo
           uses: actions/checkout@v4
           
-        - name: Install Cowsay program
-          run: sudo apt-get install cowsay -y
-
-        - name: Execute Cowsay CMD
-          run: cowsay -f tux "Hello Love Ice" >> tux.txt
-          
-        - name: Read Files
-          run: cat tux.txt
-
         - name: List Repo Files
-          run: ls -ltra
+          run: ls -lart
+
+        - name: Executing Shell Script
+          run: ./ascii-script.sh
