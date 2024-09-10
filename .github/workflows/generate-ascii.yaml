@@ -13,7 +13,7 @@ jobs:
           run: sudo apt-get install cowsay -y
 
         - name: Execute Cowsay CMD
-          run: fortune | cowsay -f tux | lolcat >> tux.txt
+          run: cowsay -f tux "Hello Love Ice" >> tux.txt
 
         - name: Test File Exists
           run: grep -i "tux" tux.txt
